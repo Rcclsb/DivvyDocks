@@ -28,9 +28,16 @@ if __name__ == '__main__':
     # Harper Ave & 59 = 425
     # Ellis Ave & 60 = 426
     complete_data = []
-    for i in range(5):
+    cycle_start = time.time()
+    while True:
         complete_data.append(get_docks([423, 328, 426, 420, 345, 424, 425]))
-        time.sleep(5)
+        if time.time()>cycle_start+3600:
+            file = open("dock_data_"+str(round(time.time()))+".json","w")
+            file.write(json.dumps(complete_data))
+            file.close()
+            complete_data = []
+            cycle_start = time.time()
+        time.sleep(60)
     print(complete_data)
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
