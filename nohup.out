@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/home/rcclsb/DivvyDocks/main.py", line 33, in <module>
+    complete_data.append(get_docks([423, 328, 426, 420, 345, 424, 425]))
+  File "/home/rcclsb/DivvyDocks/main.py", line 10, in get_docks
+    html = response.read()
+  File "/usr/local/lib/python3.9/http/client.py", line 471, in read
+    s = self._safe_read(self.length)
+  File "/usr/local/lib/python3.9/http/client.py", line 612, in _safe_read
+    data = self.fp.read(amt)
+  File "/usr/local/lib/python3.9/socket.py", line 704, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/local/lib/python3.9/ssl.py", line 1241, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/local/lib/python3.9/ssl.py", line 1099, in read
+    return self._sslobj.read(len, buffer)
+ConnectionResetError: [Errno 104] Connection reset by peer
