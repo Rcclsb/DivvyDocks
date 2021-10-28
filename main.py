@@ -31,7 +31,7 @@ if __name__ == '__main__':
     cycle_start = time.time()
     while True:
         complete_data.append(get_docks([423, 328, 426, 420, 345, 424, 425]))
-        if time.time()>cycle_start+3600:
+        if time.time()>cycle_start+(3600*3):
             file = open("dock_data_"+str(round(time.time()))+".json","w")
             file.write(json.dumps(complete_data))
             file.close()
